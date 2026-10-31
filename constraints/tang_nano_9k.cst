@@ -1,0 +1,26 @@
+// Sipeed Tang Nano 9K (GW1NR-LV9QN88PC6/I5) pins for wafer_top, tested on the board.
+// Bank 3 (LEDs, buttons) is powered at 1.8 V on this board; clock and the BL702 UART pins are 3.3 V.
+
+IO_LOC  "clk" 52;                       // 27 MHz crystal
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "btn_s1_n" 3;                   // S1, low when pressed -> reset
+IO_PORT "btn_s1_n" IO_TYPE=LVCMOS18 PULL_MODE=UP;
+
+IO_LOC  "uart_tx" 17;                   // FPGA -> BL702 -> host
+IO_PORT "uart_tx" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC  "uart_rx" 18;                   // host -> BL702 -> FPGA
+IO_PORT "uart_rx" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "led_n[0]" 10;                  // busy
+IO_PORT "led_n[0]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8;
+IO_LOC  "led_n[1]" 11;                  // result ready
+IO_PORT "led_n[1]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8;
+IO_LOC  "led_n[2]" 13;                  // mask bit 0 (Center)
+IO_PORT "led_n[2]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8;
+IO_LOC  "led_n[3]" 14;                  // mask bit 1 (Donut)
+IO_PORT "led_n[3]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8;
+IO_LOC  "led_n[4]" 15;                  // mask bit 2 (Edge-Loc)
+IO_PORT "led_n[4]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8;
+IO_LOC  "led_n[5]" 16;                  // mask bit 3 (Edge-Ring)
+IO_PORT "led_n[5]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8;
