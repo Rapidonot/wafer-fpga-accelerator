@@ -1,0 +1,11 @@
+source: wafer_cnn_int8.npz
+layers: 5
+i   C   O   H   W pool  PH  PW   K  WBASE PBASE  OUTSZ   MACs
+0   2   8  56  56    1  28  28  18      0     0   6272  451584
+1   8  16  28  28    1  14  14  72    144     8   3136  903168
+2  16  32  14  14    1   7   7 144   1296    24   1568  903168
+3  32  32   7   7    0   7   7 288   5904    56   1568  451584
+4  32  48   7   7    0   7   7 288  15120    88   2352  677376
+multiply-accumulates per wafer: 3386880
+compute clocks per wafer: 3391816 (125.6 ms at 27 MHz)
+map RAM depth 6272 (x2), weight ROM 28944 B, param ROM 136 x 54 b, head ROM 384 B
