@@ -95,7 +95,6 @@ python host/wafer_host.py demo --idx 2119     # one wafer: map, prediction, grou
 python host/wafer_host.py run --n 200         # many wafers: agreement, F1, speed
 ```
 
-## 
 ## Notes
 - **Feature-map storage.** The feature maps are stored 9 bits wide on purpose. When yosys used its 2-bit-wide
   block-RAM mode for them, the real chip produced rare bit errors that did not appear in simulation. The 9-bit
