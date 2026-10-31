@@ -7,6 +7,10 @@ $25 **Sipeed Tang Nano 9K** FPGA (Gowin GW1NR-9). Part of the hardware was gener
 The board takes a wafer bin map over USB and reports which of eight defect patterns it contains. Its outputs
 are **bit-for-bit identical** to the integer software model on every test wafer tried (1,000 of 1,000).
 
+[![The Tang Nano 9K classifying test wafers live](assets/fpga_demo.gif)](assets/fpga_demo.mp4)
+
+The window shows each test wafer, the FPGA's prediction and its compute time. Click for the full 48-second video.
+
 ## Results
 
 | | |
@@ -110,7 +114,8 @@ rtl/gen/             generated from the model: parameters and memory images
 constraints/         Tang Nano 9K pins
 model/               the int8 model (30 KB)
 tools/               exporter, integer reference model, bitstream build script
-host/                Mac/Linux script to talk to the board
+host/                Mac/Linux scripts to talk to the board, and the live demo window
+assets/              demo video used in this README
 ```
 
 ## License
