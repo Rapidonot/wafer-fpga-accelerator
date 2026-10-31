@@ -83,7 +83,7 @@ Requirements:
 
 ```bash
 python tools/export_rtl.py            # model -> rtl/gen/ (already included; only needed for a new model)
-tools/build_bitstream.sh              # -> build/wafer_top.fs (or download it from the Releases page)
+tools/build_bitstream.sh              # -> build/wafer_top.fs
 openFPGALoader -b tangnano9k build/wafer_top.fs          # load; add -f to keep it after power-off
 ```
 
